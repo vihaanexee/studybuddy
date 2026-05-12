@@ -1,0 +1,40 @@
+# ─── Dependencies ────────────────────────────────────────
+node_modules/
+
+# ─── Environment Variables ───────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Next.js ─────────────────────────────────────────────
+app/.next/
+app/out/
+app/build/
+
+# ─── TypeScript Build ────────────────────────────────────
+*.tsbuildinfo
+next-env.d.ts
+backend/study-buddy-backend/dist/
+
+# ─── Prisma ──────────────────────────────────────────────
+backend/study-buddy-backend/prisma/*.db
+backend/study-buddy-backend/prisma/migrations/
+
+# ─── OS & Editor ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Debug Logs ──────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ─── Misc ────────────────────────────────────────────────
+*.pem
+.vercel
+coverage/
