@@ -7,7 +7,7 @@ export class AnthropicProvider implements AIProvider {
   private client: Anthropic;
 
   constructor() {
-    this.client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
+    this.client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY ?? '' });
   }
 
   async *streamChat(
@@ -45,14 +45,4 @@ export class AnthropicProvider implements AIProvider {
       }
     }
   }
-}
-
-// Singleton instance
-let provider: AIProvider | null = null;
-
-export function getAIProvider(): AIProvider {
-  if (!provider) {
-    provider = new AnthropicProvider();
-  }
-  return provider;
 }

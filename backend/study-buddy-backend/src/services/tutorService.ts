@@ -1,6 +1,6 @@
 import { prisma } from '../db/prisma.js';
 import { notFound, forbidden } from '../utils/errors.js';
-import { getAIProvider } from '../ai/anthropic.js';
+import { getAIProvider } from '../ai/index.js';
 import { summarizeEmotions } from '../ai/emotionContext.js';
 import { buildSystemPrompt } from '../ai/promptBuilder.js';
 import type { ChatMessage } from '../ai/provider.js';
